@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Ejemplo 1</title>
+  </head>
+  <body>
+    <div id="app">
+      {{ message }}
+      <hr>
+      <div id="presentacion">
+        <span v-if="bandera">Mensaje visto</span>
+      </div>
+      <hr>
+      <div id="ciclo">
+        <ol>
+          <li v-for="t in personas">
+            {{ t.nombre }}
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hola Vue!',
+        bandera: true,
+        personas: [
+          {nombre: "Luis"},
+          {nombre: "José"},
+          {nombre: "María"},
+          {nombre: "Ana"},
+
+        ]
+      }
+    })
+
+    </script>
+
+  </body>
+</html>

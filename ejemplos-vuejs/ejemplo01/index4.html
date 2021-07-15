@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Ejemplo 1</title>
+  </head>
+  <body>
+    <div id="app">
+      {{ mensaje }}
+      <hr>
+      <input v-model="mensaje">
+    </div>
+
+    <script type="text/javascript">
+
+    var app = new Vue({
+      el: '#app',
+      data: {
+        mensaje: 'Ecuador país de Sudamérica',
+      },
+      methods: {
+        convertirMayuscula: function () {
+          this.message = this.message.toUpperCase();
+        },
+
+        convertirMinuscula: function () {
+          this.message = this.message.toLowerCase();
+        },
+      }
+    })
+
+    </script>
+
+  </body>
+</html>
